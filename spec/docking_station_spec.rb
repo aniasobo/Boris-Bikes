@@ -19,7 +19,7 @@ describe DockingStation do
       expect(bikes_docked.size).to be >= 1
     end
     it 'raises error if the station is full' do
-      20.times { subject.dock Bike.new }
+      DockingStation::DEFAULT_CAPACITY.times { subject.dock Bike.new }
       expect { subject.dock Bike.new}.to raise_error('Station full')
     end
   end
@@ -34,8 +34,8 @@ describe DockingStation do
    end
 
     it 'throws an error when no bikes avaliable' do
-  #    20.times { subject.release_bike }
-      expect { subject.release_bike }.to raise_error('Station empty')
+      @station.release_bike
+      expect { @station.release_bike }.to raise_error('Station empty')
     end
   end
 end
