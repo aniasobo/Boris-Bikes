@@ -20,12 +20,12 @@ _pairing: Anna & Rachel_
 - [x] Back to the unit
 - [x] Building a bike
 - [x] Making Docking Stations get Bikes
-- [ ] Using Instance Variables
-- [ ] Raising Exceptions
-- [ ] Limiting Capacity
-- [ ] Using Complex Attributes
-- [ ] The Single Responsibility Principle
-- [ ] Removing Magic Numbers
+- [x] Using Instance Variables
+- [x] Raising Exceptions
+- [x] Limiting Capacity
+- [x] Using Complex Attributes
+- [x] The Single Responsibility Principle
+- [x] Removing Magic Numbers
 - [ ] Initialization Defaults
 - [ ] Dealing with Broken Bikes
 - [ ] Isolating Tests with Doubles
@@ -34,11 +34,19 @@ _pairing: Anna & Rachel_
 - [ ] Modules as Mixins
 
 
-### Things we learned:
-- GitHub collaboration with both collaborators committing changes (driver initialised & added remote, navigator updates the tracking note & process notes)
+### Concepts learned:
+- GitHub collaboration practice 
 - structure of user story
-- stack trace -> list of method calls that the program was in the middle of when an Exception was thrown
-- initialising the object in irb, as a nil object, solves the uninitialised constant error
-- initialising rspec - added lib directory manually, added the first test file in the spec directory, ran rspec to confirm all is green/setup was successful 
-- Rspec - use the 'subject' keyword to test instances of class (describe block contains class/object name which is the subject, similar to self)
+- stack trace
+- test driving in irb
+- rspec setup 
+- Rspec 'subject' keyword 
 - single-line Rspec syntax
+- attribute readers
+- guard conditions and error handling
+- Rspec - nested describes
+- Rspec syntax for error handling
+- Single Responsibility Principle 
+- using constants to replace magic numbers
+- encapsulation
+- private methods

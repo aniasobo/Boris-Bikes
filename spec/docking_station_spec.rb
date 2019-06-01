@@ -3,7 +3,19 @@ require 'bike'
 require 'spec_helper'
 
 describe DockingStation do
- # it { is_expected.to respond_to :release_bike }
+  describe '#initialize' do
+ #   it 'has a default capacity of 20' do
+ #   end
+    it 'changes capacity with an argument' do
+      station = DockingStation.new(21)
+      another_station = DockingStation.new
+      station_array = []
+      another_station_array = []
+      21.times { station.dock(Bike.new) }
+      21.times { another_station.dock(Bike.new) }
+      expect(station_array.count).to be > another_station_array.count
+    end
+  end
   it 'gets a bike' do
     bike = Bike.new
     #subject.dock(bike)
@@ -19,7 +31,8 @@ describe DockingStation do
       expect(bikes_docked.size).to be >= 1
     end
     it 'raises error if the station is full' do
-      DockingStation::DEFAULT_CAPACITY.times { subject.dock Bike.new }
+      station = DockingStation.new(2)
+      2.times { subject.dock Bike.new }
       expect { subject.dock Bike.new}.to raise_error('Station full')
     end
   end
